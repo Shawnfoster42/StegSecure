@@ -1,228 +1,89 @@
-Web Steganography Tool – Dependency Installation
-1. Pre-requisites
+# 🔐 StegSecure – Web-Based Steganography Tool
 
-Before installing the dependencies, ensure the following:
+## 👨‍💻 About Me
 
-Python 3.11+ (preferably 3.12–3.13) is installed on your system.
+Hi, I'm **Mohammed Zaid Jubair Khatri**, a cybersecurity enthusiast and BCA student at **Manipal University Jaipur**, with a strong interest in **Cybersecurity, Ethical Hacking, Penetration Testing, and Secure Application Development**.
 
-Pip is installed and updated. You can check with:
+I have completed cybersecurity training and certifications including **Certified Ethical Hacker (CEH)** and practical penetration-testing training. I enjoy building security-focused projects to strengthen my understanding of real-world cybersecurity concepts.
 
-python --version
-pip --version
+My goal is to develop practical cybersecurity skills by combining **ethical hacking, secure coding, web security, and security research**.
 
+---
 
-PowerShell (Windows) or Terminal (Linux/Mac) is available.
+## 🚀 About StegSecure
 
-2. Virtual Environment Setup (Recommended)
+**StegSecure** is a web-based steganography application designed to securely hide sensitive information inside **image, audio, and video files**.
 
-Using a virtual environment ensures that all dependencies for this project are isolated from global Python packages:
+The project combines **steganography and cryptography** to provide an additional layer of protection. Secret messages are protected using password-based encryption before being embedded into the selected media.
 
-Create a virtual environment in your project folder:
+The project was developed as a practical cybersecurity project to explore **data hiding, encryption, multimedia processing, and secure web application development**.
 
-python -m venv venv
+### ✨ Key Features
 
+- 🖼️ Image Steganography
+- 🔊 Audio Steganography
+- 🎥 Video Steganography
+- 🔐 Password-based encryption
+- 🔒 AES-based encryption for protected data
+- 📤 Drag-and-drop file uploads
+- 👁️ Live preview and password visibility controls
+- ✅ File type validation
+- 📥 Encode and decode functionality
+- 🌐 Browser-based interface
+- 🛡️ Secure file handling
 
-Activate the virtual environment:
+---
 
-Windows (PowerShell):
+## 🛠️ Technologies Used
 
-.\venv\Scripts\activate
+- **Python**
+- **Flask**
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **OpenCV**
+- **Pillow**
+- **NumPy**
+- **Cryptography**
+- **Werkzeug**
 
+---
 
-Linux / Mac:
+## 🎯 Project Purpose
 
-source venv/bin/activate
+The main purpose of StegSecure is to demonstrate how **steganography and cryptography can be combined** to protect sensitive information.
 
+Instead of simply encrypting a message and making the encrypted data visible, StegSecure attempts to conceal the protected information inside an ordinary multimedia file.
 
-You should see (venv) at the start of your terminal prompt.
+---
 
-3. Install Dependencies
+## 📚 Cybersecurity Concepts Demonstrated
 
-The project depends on several Python packages:
+- Steganography
+- Cryptography
+- AES Encryption
+- Secure File Handling
+- Input Validation
+- Multimedia Processing
+- Web Application Security
+- Password-Based Data Protection
 
-Flask – web framework
+---
 
-Werkzeug – Flask dependency
+## 👨‍💻 Developer
 
-Cryptography – for optional message encryption
+**Mohammed Zaid Jubair Khatri**
 
-Pillow (PIL) – image processing
+BCA Student | Cybersecurity Enthusiast
 
-OpenCV (opencv-python) – video processing
+**Areas of Interest:**
+- Ethical Hacking
+- Penetration Testing
+- Web Security
+- Cybersecurity
+- Python for Security
+- Secure Application Development
 
-NumPy – numerical computations
+---
 
-To install the latest compatible versions, run:
-
-pip install --upgrade Flask Werkzeug cryptography numpy opencv-python Pillow --only-binary :all:
-
-
-Notes:
-
---upgrade ensures the latest version compatible with your Python is installed.
-
---only-binary :all: ensures precompiled binaries are used for Pillow to avoid Windows build errors.
-
-4. Verify Installation
-
-After installing dependencies, run:
-
-python -c "import flask, werkzeug, cryptography, PIL, cv2, numpy; print('All OK!')"
-
-
-Expected output:
-
-All OK!
-
-
-This confirms that all required libraries are installed correctly.
-
-5. Running the Application
-
-Once dependencies are installed:
-
-python backend\app.py
-
-
-or using Flask CLI:
-
-set FLASK_APP=backend\app.py
-set FLASK_ENV=development
-flask run
-
-
-Open your browser at http://127.0.0.1:5000/ to access the Web Steganography Tool.
-
-6. Optional Tips
-
-Keep your virtual environment activated whenever working on this project.
-
-To deactivate:
-
-deactivate
-
-
-Always install new Python packages inside the venv to avoid conflicts.
-
-
-🔐 Project Overview
-
-This is a Flask-based Steganography Web Application that allows users to hide secret messages in Image, Audio, and Video files.
-✅ Supports Drag & Drop uploads
-✅ Password-based encryption
-✅ Works for Encoding & Decoding
-✅ Shows video encryption password with View/Hide toggle
-
-🛠 Features
-Feature	Image	Audio	Video
-Hide Text Message	✅	✅	✅
-Extract Message	✅	✅	✅
-Password Protection	✅	✅	✅
-Live Preview	✅	✅	✅
-Drag and Drop Support	✅	✅	✅
-File Validation	✅ (JPEG/PNG)	✅ (WAV only)	✅ (MP4, AVI, MOV)
-📁 Project Structure
-project/
-│
-├─ backend/
-│  ├─ app.py
-│  ├─ routes/
-│  │  ├─ image_routes.py
-│  │  ├─ audio_routes.py
-│  │  ├─ video_routes.py
-│  ├─ utils/
-│     ├─ image_tool.py
-│     ├─ audio_tool.py
-│     ├─ video_tool.py
-│
-├─ static/
-│  ├─ style.css
-│  ├─ script.js
-│
-└─ templates/
-   └─ index.html
-
-✅ Requirements
-
-Install Python 3.9+ then run:
-
-pip install -r requirements.txt
-
-
-If you don’t have requirements.txt, install dependencies manually:
-
-pip install Flask cryptography
-
-
-📝 Flask — main backend
-🔐 cryptography — secure AES-based encryption for video
-📦 Werkzeug — filename security (comes with flask install)
-
-▶️ How to Run the Application
-cd stigno garpy project
-python -m backend.app
-
-
-Server Running At:
-
-http://127.0.0.1:5000
-
-
-Then visit the URL in a browser ✅
-
-🔍 Usage Instructions
-🖼 Image & 🔊 Audio
-
-1️⃣ Upload a supported file
-2️⃣ Enter message & password
-3️⃣ Click Encode
-4️⃣ Download the encrypted output file
-5️⃣ To decode → upload the encrypted file, enter same password → Decode
-
-✅ Decoded message appears on screen
-
-🎥 Video Steganography
-
-1️⃣ Upload MP4/AVI/MOV video
-2️⃣ Click Encode
-3️⃣ System generates a secure password
-4️⃣ Encrypted video auto-downloads
-5️⃣ Store the password (or reveal it using 👁 toggle)
-6️⃣ For decode → upload encrypted video + enter password → Decode
-
-✅ Decoded file auto-downloads
-
-⚠️ Important Notes
-
-Do not refresh page before decoding → password resets!
-
-Store video password securely after encryption
-
-Large videos may take longer due to encryption time
-
-Browser may block Auto-Downloaded Encrypted video → click "Allow" or enable pop-ups
-
-✅ Browser Compatibility
-Browser	Status
-Chrome	✅ Recommended
-Edge	✅
-Firefox	✅
-Safari	⚠ Video download prompt may appear
-🔒 Security
-
-AES Encryption for Video
-
-Messages never stored on server
-
-Password required for decoding protected content
-
-👨‍💻 Developer
-
-This project is developed as part of a Cybersecurity / Steganography learning module.
-
-
-✅ Future Improvements (optional)
-✅ Add progress bar per-tab
-✅ Support MP3 audio
-✅ Improve video steganography performance
-✅ Cloud deployment (Render / Railway)
+> ⚠️ **Disclaimer:** StegSecure is an educational cybersecurity project developed for learning and research purposes. Use it only with files and data that you are authorized to process.
