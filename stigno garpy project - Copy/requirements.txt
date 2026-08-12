@@ -1,0 +1,6 @@
+Flask
+Werkzeug
+cryptography
+numpy
+opencv-python
+Pillow
